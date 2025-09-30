@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Eterno Florecer - Venta de flores eternas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f2eee7, #ffffff);
+    color: #4a4a32;
+  }
+
+  header {
+    background: #f2eee7;
+    padding: 10px 40px;
+    box-shadow: 0 4px 8px rgba(105, 115, 54, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.3s;
+  }
+
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header img {
+    max-width: 190px; 
+    height: auto;
+    user-select: none;
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #3b3e1f;
+    user-select: none;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  nav a {
+    color: #475324;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background-color: #a7ae74;
+    color: #3b3e1f;
+    outline: none;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    margin-bottom: 60px;
+    background: #f2eee7;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(105, 115, 54, 0.15);
+  }
+
+  section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-bottom: 18px;
+    color: #697336;
+    border-bottom: 2px solid #a7ae74;
+    padding-bottom: 6px;
+  }
+
+  p {
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: #585832;
+    white-space: pre-line;
+    font-weight: 400;
+  }
+
+  /* Pricing styles */
+  .pricing-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    justify-items: center;
+  }
+
+  .price-card {
+    background: #d8d7b3;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(105, 115, 54, 0.25);
+    padding: 22px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(105, 115, 54, 0.35);
+  }
+
+  .img-placeholder {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .price-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #475324;
+    text-align: center;
+  }
+
+  .price-card p {
+    font-size: 1rem;
+    color: #4b4b2b;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #566622;
+  }
+
+  /* Footer */
+  footer {
+    background: #697336;
+    color: #e6e2d3;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px 20px;
+    }
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header img {
+      max-width: 50px;
+    }
+    nav a {
+      font-size: 1rem;
+      padding: 6px 10px;
+    }
+  }
+
+  .hero {
+    height: 500px;
+    background-image: url('./Flores Eternas - Website/Eterno\ florecer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 960px;
+    box-shadow: 0 10px 25px rgba(105, 115, 54, 0.3);
+  }
+
+</style>
+</head>
+<body>
+<header id="header">
+  <div class="logo-container" aria-label="Logo y nombre del sitio">
+    <img src="./Flores Eternas - Website/Logo.png" alt="Logo de Flores Eternas" />
+  </div>
+  <nav role="navigation" aria-label="Menú principal">
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <a href="#precios">Precios</a>
+  </nav>
+</header>
+
+<div class="hero" role="img" aria-label="Imagen principal de flores eternas"></div>
+<main>
+  <section id="sobre-nosotros" tabindex="0">
+    <h2>Sobre nosotros</h2>
+    <p>
+      Eterno Florecer es un negocio dedicado a la fabricación de flores eternas, siendo estas un detalle que promete perdurar en el tiempo.<br />
+      Nuestro negocio ofrece al comprador una experiencia única al entregar un trabajo basado en las preferencia y especificaciones del cliente.
+    </p>
+  </section>
+  <section id="mision" tabindex="0">
+    <h2>Misión</h2>
+    <p>
+      Brindar a nuestros clientes una experiencia única a través de la venta de rosas eternas de alta calidad, preservadas con técnicas exclusivas para garantizar su belleza inalterable. Nos comprometemos a ofrecer un producto que simbolice el amor, la amistad y los momentos especiales, a la vez que promovemos la sostenibilidad y el respeto por el medio ambiente.
+    </p>
+  </section>
+  <section id="vision" tabindex="0">
+    <h2>Visión</h2>
+    <p>
+      Ser un negocio reconocido por su calidad, innovación y compromiso con la belleza duradera, ofreciendo productos que transmiten amor y un arcoiris de emociones únicas para cada ocasión especial.
+    </p>
+  </section>
+  <section id="precios" tabindex="0">
+    <h2>Precios</h2>
+    <div class="pricing-list" aria-label="Lista de precios de flores eternas">
+      <article class="price-card" role="article" aria-labelledby="prod1-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/1 Girasol.png" alt="1 Girasol" />
+        </div>
+        <h3 id="prod1-title">1 Girasol</h3>
+        <p>Un girasol brillante que simboliza la alegría y la felicidad. Perfecto para alegrar cualquier espacio.</p>
+        <div class="price"> $2.00 </div>
+      </article>
+      <article class="price-card" role="article" aria-labelledby="prod2-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/1 Rosa.png" alt="1 Rosa" />
+        </div>
+        <h3 id="prod2-title">1 Rosa</h3>
+        <p>Una rosa clásica que representa el amor y la pasión. Ideal para expresar tus sentimientos más profundos.</p>
+        <div class="price"> $1.50 </div>
+      </article>
+      <article class="price-card" role="article" aria-labelledby="prod3-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/1 rosa con imagen.png" alt="1 Rosa con imagen" />
+        </div>
+        <h3 id="prod3-title">1 Rosa con imagen</h3>
+        <p>Una rosa personalizada con una imagen especial. Un regalo único que captura momentos inolvidables.</p>
+        <div class="price"> $2.00 </div>
+      </article>
+      <article class="price-card" role="article" aria-labelledby="prod4-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/3 rosas.png" alt="3 Rosas" />
+        </div>
+        <h3 id="prod4-title">3 Rosas</h3>
+        <p>Un hermoso ramo de tres rosas, perfecto para cualquier ocasión. Un gesto simple pero significativo.</p>
+        <div class="price"> $4.00 </div>
+      </article>
+      <article class="price-card" role="article" aria-labelledby="prod5-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/6 rosas.png" alt="6 Rosas" />
+        </div>
+        <h3 id="prod5-title">6 Rosas</h3>
+        <p>Un elegante ramo de seis rosas, ideal para celebrar momentos especiales con tus seres queridos.</p>
+        <div class="price"> $8.00 </div>
+      </article>
+      <article class="price-card" role="article" aria-labelledby="prod6-title">
+        <div class="img-placeholder">
+          <img src="./Flores Eternas - Website/10 rosas.png" alt="10 Rosas" />
+        </div>
+        <h3 id="prod6-title">10 Rosas</h3>
+        <p>Un impresionante ramo de diez rosas, la elección perfecta para expresar amor y aprecio en grande.</p>
+        <div class="price"> $12.00 </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  &copy; 2025 Eterno Florecer. Todos los derechos reservados.
+</footer>
+
+<script>
+  let lastScrollTop = 0;
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      header.style.top = "-100px";
+    } else {
+      header.style.top = "0"; 
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+</body>
+</html>
+
